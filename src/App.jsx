@@ -1,7 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import aboutus from "./assets/arcgis.png";
+import dcMngt from "./assets/dc-project-img.PNG";
+import insta from "./assets/insta-img.PNG";
 export default function Portfolio() {
   return (
     <div className="font-sans text-white bg-gradient-to-br from-gray-900 via-gray-800 to-black">
@@ -48,7 +49,7 @@ export default function Portfolio() {
         </motion.p>
 
         <motion.a
-          href="/Joginder_SDE_Resume.pdf"
+          href="/Joginder_Resume.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -196,7 +197,7 @@ export default function Portfolio() {
       <section className="px-6 py-10 md:px-20 bg-gray-700">
         <h2 className="text-3xl font-semibold mb-6">Projects</h2>
 
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <h3 className="text-xl font-bold">SalonDekho</h3>
           <p className="text-sm italic">
             MERN Stack | Redux |{" "}
@@ -212,26 +213,74 @@ export default function Portfolio() {
             <li>Streamlined salon booking for customers and owners.</li>
             <li>Used Redux for state management.</li>
           </ul>
+        </div> */}
+
+        <div className="flex flex-col sm:flex-row gap-2 mb-6">
+          <div className="w-full sm:w-[60%]">
+            <img src={dcMngt} alt="dc-project" />
+          </div>
+          <div className="w-full sm:w-[40%]">
+            <h3 className="text-xl font-bold">
+              Doctor Appointment Booking System
+            </h3>
+            <p className="text-sm italic pb-3">
+              Full Stack |{" "}
+              <a
+                href="https://doctor-management-application.onrender.com/"
+                target="_blank"
+                className="text-blue-400 underline"
+              >
+                Live Link
+              </a>
+            </p>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>
+                Implemented role-based authentication for patients, doctors, and
+                admin to ensure secure access control.
+              </li>
+              <li>
+                Built features for appointment scheduling, profile management,
+                earnings tracking, and admin-level doctor management.
+              </li>
+              <li>
+                ntegrated Razorpay payment gateway for secure online appointment
+                fee transactions.
+              </li>
+              <li>
+                Structured the project with scalable folder architecture,
+                utilized Context API and created custom hooks.
+              </li>
+              <li>
+                Designed and developed by using React.js, Node.js, Express.js,
+                PostgreSQL, and Prisma ORM.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold">Instagram Clone</h3>
-          <p className="text-sm italic">
-            MERN Stack |{" "}
-            <a
-              href="https://instagram-frontend.vercel.app/"
-              target="_blank"
-              className="text-blue-400 underline"
-            >
-              Live Link
-            </a>
-          </p>
-          <ul className="list-disc ml-5 space-y-1">
-            <li>
-              Implemented auth, image uploads, captions, likes, and comments.
-            </li>
-            <li>Core features of a social media app with engaging UX.</li>
-          </ul>
+        <div className="flex flex-col sm:flex-row gap-2 mb-6 mt-10 md:mt-20">
+          <div className="w-full sm:w-[60%]">
+            <img src={insta} alt="dc-project" />
+          </div>
+          <div className="w-full sm:w-[40%]">
+            <h3 className="text-xl font-bold">Instagram Clone</h3>
+            <p className="text-sm italic pb-3">
+              MERN Stack |{" "}
+              <a
+                href="https://instagram-frontend.vercel.app/"
+                target="_blank"
+                className="text-blue-400 underline"
+              >
+                Live Link
+              </a>
+            </p>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>
+                Implemented auth, image uploads, captions, likes, and comments.
+              </li>
+              <li>Core features of a social media app with engaging UX.</li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
