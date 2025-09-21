@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --radius: 12px;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: InterVariable, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+
+.dark body {
+  background: #0b0b0c;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Container utility for content width alignment */
+.container-max {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
